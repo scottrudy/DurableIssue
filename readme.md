@@ -15,6 +15,17 @@ This project can be cloned and run from the command line using dotnet core and A
 2. `dotnet run`
 3. Test the application with a get request to https://localhost:5001/api/values/5
 
+### Add `local.settings.json` to function project
+```
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+    }
+}
+```
+
 ### Run function project (relies on running web project)
 
 1. [Start Azure Storage Emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator#start-and-initialize-the-storage-emulator)
